@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Razor Fun</title>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Yummy Foods!</h2>
+    @{
+        string[] foods = {"Burger", "Burritos", "Calamari", "Pizza", "Cotton Candy", "Steak", "Carbonara"};
+        foreach(string food in foods){
+            if(food[0] == 'C'){
+                <p class="red">@food</p>
+            } 
+            else{
+            <p>@food</p>
+            } 
+        }
+    }
+</body>
+</html>
